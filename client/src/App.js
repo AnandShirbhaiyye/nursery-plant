@@ -1,12 +1,10 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Title from './Title/Title'
 
-function App() {
+export default function App() {
   return (
-    <div className="container">
-    <h1 className="text-center">Nuesery plant tree</h1>
+    <div>
+      <Title/>
     </div>
-  );
+  )
 }
-
-export default App;
