@@ -14,7 +14,7 @@ mongoose.connect('mongodb+srv://anand123:anand123@nursery-plant.mpanrx9.mongodb.
     console.log('MongoDB Connected...!');
 });
 
-//Add Task
+//Add plant
 app.post('/add/plant', async (req, res) => {
     const plant = new Plant({
         id: req.body.id,
@@ -30,6 +30,30 @@ app.post('/add/plant', async (req, res) => {
         message:"Plant Added Successfully"
     })
 });
+
+
+//get all plants
+app.get('/get/allplant', async (req, res) => {
+    const plants = await Plant.find();
+    res.send(plants);
+});
+
+
+//Get plant by id
+app.post('/get/plant', async (req, res) => {
+    const plant = await Plant.findOne({id : req.body.id});
+    res.send(plant);
+});
+
+//Delete plant
+app.post('/delete/plant', async (req, res) => {
+    await Plant.deleteOne({id : req.body.id});
+    res.send({
+        message:"Plant Deleted Successfully"
+    })
+});
+
+
 
 const PORT = 5000;
 
