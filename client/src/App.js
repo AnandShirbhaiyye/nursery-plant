@@ -1,6 +1,7 @@
 import React from 'react'
 import AddPlant from './AddPlant/AddPlant'
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import ShowPlant from './ShowPlant/ShowPlant';
 
 export default function App() {
   return (
@@ -36,8 +37,8 @@ export default function App() {
                   </Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="./searchbook">
-                    <h4><b>Search Plant</b></h4>
+                  <Link className="nav-link" to="./showplant">
+                    <h4><b>Show Plant</b></h4>
                   </Link>
                 </li>
               </ul>
@@ -47,6 +48,7 @@ export default function App() {
 
         <Routes>
           <Route path="/addplant" element={<AddPlant />} />
+          <Route path="/showplant" element={<ShowPlant />} />
         </Routes>
       </BrowserRouter>
     </div>

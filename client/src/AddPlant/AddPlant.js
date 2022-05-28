@@ -4,7 +4,7 @@ import { useState } from "react";
 import plantimg from './jaconda-52.png';
 import axios from 'axios';
 import swal from "sweetalert";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export default function AddPlant() {
 
     const navigate = useNavigate();
@@ -47,7 +47,7 @@ export default function AddPlant() {
                   .then((res) => {
                     swal("Success!", "Plant Added successfully!", "success").then(
                       (value) => {
-                        navigate("/");
+                        navigate("/showplant");
                       }
                     );
                   })
