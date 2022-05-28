@@ -1,10 +1,11 @@
 import React from 'react'
-import Title from './Title/Title'
+import AddPlant from './AddPlant/AddPlant'
+
 
 export default function App() {
   return (
     <div>
-      <Title/>
+     <AddPlant/>
     </div>
   )
 }

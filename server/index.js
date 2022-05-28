@@ -53,6 +53,15 @@ app.post('/delete/plant', async (req, res) => {
     })
 });
 
+//Update plant
+app.post('/update/plant', async (req, res) => {
+    const plant = await Plant.updateOne({id : req.body.id},
+        {$set : {title: req.body.title, description: req.body.description, plant_url: req.body.plant_url, prize: req.body.prize, quantity: req.body.quantity, category: req.body.category}
+    });
+    res.send({
+        message:"Plant Updated Successfully"
+    })
+})
 
 
 const PORT = 5000;
