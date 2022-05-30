@@ -2,6 +2,7 @@ import React from 'react'
 import AddPlant from './AddPlant/AddPlant'
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import ShowPlant from './ShowPlant/ShowPlant';
+import FetchData from './FetchData/FetchData';
 
 export default function App() {
   return (
@@ -41,6 +42,11 @@ export default function App() {
                     <h4><b>Show Plant</b></h4>
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="./get/allplant">
+                    <h4><b>FetchData</b></h4>
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -49,6 +55,7 @@ export default function App() {
         <Routes>
           <Route path="/addplant" element={<AddPlant />} />
           <Route path="/showplant" element={<ShowPlant />} />
+          <Route path="/get/allplant" element={<FetchData />} />
         </Routes>
       </BrowserRouter>
     </div>
