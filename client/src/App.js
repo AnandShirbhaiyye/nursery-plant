@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import ShowPlant from './ShowPlant/ShowPlant';
 import FetchData from './FetchData/FetchData';
 
+
 export default function App() {
   return (
     <>
@@ -37,18 +38,35 @@ export default function App() {
                     <h4><b>Add Plant</b></h4>
                   </Link>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <Link className="nav-link" to="./showplant">
                     <h4><b>Show Plant</b></h4>
                   </Link>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <Link className="nav-link" to="./get/allplant">
-                    <h4><b>FetchData</b></h4>
+                    <h4><b>Show Plants</b></h4>
                   </Link>
                 </li>
               </ul>
             </div>
+            <div className="collapse navbar-collapse navbar-sizing" id="navbarNav" style={{display:"flex",flexDirection:"row",justifyContent:"flex-end"}}>
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <Link className="nav-link" to="./login">
+                    <h4 className='nav_register'><b>Login</b></h4>
+                  </Link>
+                </li>
+              </ul>
+              <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                  <Link className="nav-link" to="./register">
+                    <h4 className='nav_register'><b>Register</b></h4>
+                  </Link>
+                </li>
+              </ul>
+                
+                </div>
           </div>
         </nav>
 

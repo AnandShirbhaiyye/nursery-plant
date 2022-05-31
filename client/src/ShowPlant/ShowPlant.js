@@ -1,27 +1,28 @@
 import React from 'react'
 import "./Showplant.css"
+import axios from 'axios'
+import {useState, useEffect} from 'react'
+import swal from 'sweetalert'
 export default function ShowPlant(props) {
+
+  async function deletePlant(){
+    
+    const result = await axios.post('/delete/plant', {
+      id: props.id
+    })
+    if(result.data.status === 'success'){
+      swal("Success!", "Plant Deleted successfully!", "success").then((value) => {
+        props.history.push('/get/allplant')
+      })
+    }
+    else{
+      swal("Error!", result.data.message, "warning");
+    }
+  }
+   
+  
   return (
     <>
-
-            {/* <div className='row'>
-            <div className='col-md-6'>
-            <h2>Id: {props.id}</h2>
-            <h2>TITLE : {props.title}</h2>
-            <h2>DESCRIPTION : {props.description}</h2>
-            <h2>PRIZE : {props.prize}</h2>
-            <h2>QUANTITY : {props.quantity}</h2>
-            <h2>CATEGORY : {props.category}</h2>
-            </div>
-            <div className='col-md-6'>
-            <div class="d-grid gap-2 col-6 mx-auto">
-                <button className="btn btn-danger mt-2" type="button" >Delete</button>
-                <button className="btn btn-success mt-3" type="button">Update</button>
-                <button className="btn btn-warning mt-3" type="button">Read</button>
-            </div>
-            </div>
-        </div> */}
-
       <div className='container'>
         <div className='row'>
           <div className='col-md-4 mt-3 p-3 card-border'>
@@ -42,7 +43,8 @@ export default function ShowPlant(props) {
             <button className='btn btn-success w-100'>Edit</button>
             </div>
             <div className='col-md-6'>
-            <button className='btn btn-danger w-100'>Delete</button>
+            <button className='btn btn-danger w-100'
+             onClick={deletePlant}>Delete</button>
             </div>
             </div>
             </div>

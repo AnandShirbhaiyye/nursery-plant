@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+.navbar-sizing{
+    background-color: #282c34;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-bottom: 1px solid black;
+    box-shadow: 0 0  10px black;
+    transition: 0.2s;
+}

@@ -47,7 +47,7 @@ export default function AddPlant() {
                   .then((res) => {
                     swal("Success!", "Plant Added successfully!", "success").then(
                       (value) => {
-                        navigate("/showplant");
+                        navigate("/get/allplant");
                       }
                     );
                   })
