@@ -3,6 +3,8 @@ import AddPlant from './AddPlant/AddPlant'
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import ShowPlant from './ShowPlant/ShowPlant';
 import FetchData from './FetchData/FetchData';
+import Login from './Login/Login';
+import Register from './Register/Register';
 
 
 export default function App() {
@@ -74,6 +76,8 @@ export default function App() {
           <Route path="/addplant" element={<AddPlant />} />
           <Route path="/showplant" element={<ShowPlant />} />
           <Route path="/get/allplant" element={<FetchData />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register/>}/>
         </Routes>
       </BrowserRouter>
     </div>

@@ -13,7 +13,7 @@ export default function FetchData() {
     axios.get('/get/allplant').then(res => {
       setPlant(res.data);
     })
-  }, [])
+  })
 
 
   // useEffect(()=>{
@@ -31,10 +31,12 @@ export default function FetchData() {
        <h1 className="text-center">Show Plant</h1>
        <hr/>
        <Link to={'/addplant'} class="btn btn-outline-success w-100"><b>ADD PLANTS</b></Link>
+       <div className='row'>
          {
            plant.map(plants =><ShowPlant id={plants.id} title={plants.title} description={plants.description}
            plant_url={plants.plant_url} prize={plants.prize} quantity={plants.quantity} category={plants.category}  />)
          }
+         </div>
        </div>
        </div>
     </>

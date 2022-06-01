@@ -3,16 +3,25 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
 app.use(express.json());
+require('dotenv').config()
 app.use(cors());
 const Plant = require('./model/Plant');
+const Auth = require('./model/Auth/Auth');
 
-//mongodb Connection
-mongoose.connect('mongodb+srv://anand123:anand123@nursery-plant.mpanrx9.mongodb.net/?retryWrites=true&w=majority',{
+mongoose.connect(process.env.MONGODB_URI,{
     useNewUrlParser: true,
     useUnifiedTopology: true
 },()=>{
     console.log('MongoDB Connected...!');
 });
+
+// //mongodb Connection
+// mongoose.connect('mongodb+srv://anand123:anand123@nursery-plant.mpanrx9.mongodb.net/?retryWrites=true&w=majority',{
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// },()=>{
+//     console.log('MongoDB Connected...!');
+// });
 
 //Add plant
 app.post('/add/plant', async (req, res) => {
@@ -62,6 +71,35 @@ app.post('/update/plant', async (req, res) => {
         message:"Plant Updated Successfully"
     })
 })
+
+
+//Register
+app.post('/register', async (req, res) => {
+    const auth = new Auth({
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
+        email: req.body.email,
+        phone: req.body.phone,
+        password: req.body.password
+    });
+    await auth.save();
+    res.send({
+        message:"Sign-UP Successfully"
+    })
+});
+
+
+//Login
+app.post('/login', async (req, res) => {
+    const auth = new Auth({
+        email: req.body.email,
+        password: req.body.password
+    });
+    await auth.save();
+    res.send({
+        message:"Login Successfully"
+    })
+});
 
 
 const PORT = 5000;
