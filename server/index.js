@@ -4,6 +4,7 @@ const cors = require('cors');
 const app = express();
 app.use(express.json());
 require('dotenv').config()
+const path = require('path');
 app.use(cors());
 const Plant = require('./model/Plant');
 const Auth = require('./model/Auth/Auth');
@@ -15,13 +16,6 @@ mongoose.connect(process.env.MONGODB_URI,{
     console.log('MongoDB Connected...!');
 });
 
-// //mongodb Connection
-// mongoose.connect('mongodb+srv://anand123:anand123@nursery-plant.mpanrx9.mongodb.net/?retryWrites=true&w=majority',{
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// },()=>{
-//     console.log('MongoDB Connected...!');
-// });
 
 //Add plant
 app.post('/add/plant', async (req, res) => {
@@ -103,7 +97,7 @@ app.post('/login', async (req, res) => {
 
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
-  
+
     app.get('*', (req, res) => {
         res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'))
     });
@@ -114,4 +108,4 @@ const PORT = 5000;
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
-}); 
+});
