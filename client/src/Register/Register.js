@@ -90,7 +90,7 @@ export default function Register() {
                   <b>Register</b>
                 </button>
 
-                <p className="text-center mt-3">
+                <p className="text-center mt-5">
                   Already have Account ? <a  className="regis_now" href="./login"> <b>Login</b></a>
                 </p>
               </form>
