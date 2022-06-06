@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './Register.css';
 
 export default function Register() {
   return (
@@ -8,7 +9,7 @@ export default function Register() {
         <div className="row">
           <div className="col-md-3"></div>
           <div className="col-md-9">
-            <div className="card card_login bg-success">
+            <div className="card card_register" style={{backgroundColor:"#00E0c6"}}>
               <h2 className="text-center">Register</h2>
               <form>
               <div className="form-group mt-2">
@@ -83,14 +84,14 @@ export default function Register() {
                 </div>
 
                 <button
-                  class="btn btn-warning w-100 mt-3"
+                  class="btn btn-warning w-100 mt-5"
                   type="submit"
                   style={{ height: "45px" }}
                 >
                   <b>Register</b>
                 </button>
 
-                <p className="text-center mt-5 ">
+                <p className="text-center mt-2 ">
                   Already have Account ? <a  className="regis_now" href="./login"> <b>Login</b></a>
                 </p>
               </form>

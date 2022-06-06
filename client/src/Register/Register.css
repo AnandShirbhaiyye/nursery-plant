@@ -1,3 +1,11 @@
 .regis_now{
     text-decoration: none;
 }
+.card_register{
+    width: 500px;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding: 30px;
+    background-color: #00E0c6;
+}

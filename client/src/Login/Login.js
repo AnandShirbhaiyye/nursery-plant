@@ -9,7 +9,7 @@ export default function Login() {
         <div className="row">
           <div className="col-md-3"></div>
           <div className="col-md-9">
-            <div className="card card_login bg-success">
+            <div className="card card_login" style={{bqckgroundColor:"#00e0c6"}}>
               <h2 className="text-center">Login</h2>
               <form>
                 <div className="form-group mt-2">
@@ -40,7 +40,7 @@ export default function Login() {
                 </div>
 
                 <button
-                  class="btn btn-warning w-100 mt-3"
+                  class="btn btn-warning w-100 mt-5"
                   type="submit"
                   style={{ height: "45px" }}
                 >

@@ -28,9 +28,11 @@ export default function FetchData() {
        <>
           <div className='gradient'>
          <div className='container' >
-       <h1 className="text-center">Show Plant</h1>
+       <button  className="button_plant mt-4">
+       <Link className='btnplant' to={'/addplant'}><h4>ADD PLANTS</h4></Link>
+       </button>
+       <h1 className="text-center card-title">Show Plant</h1>
        <hr/>
-       <Link to={'/addplant'} class="btn btn-outline-success w-100"><b>ADD PLANTS</b></Link>
        <div className='row'>
          {
            plant.map(plants =><ShowPlant id={plants.id} title={plants.title} description={plants.description}

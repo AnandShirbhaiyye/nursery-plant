@@ -81,55 +81,55 @@ export default function AddPlant() {
                         <h2 className='card-title text-center'>Add Plant</h2>
                         <form onSubmit={plantsubmit} >
                             <div className='form-group'>
-                                <label><b>Plant ID :</b></label>
+                                <label className='label_plant'><b>Plant ID :</b></label>
                                 <input type='number' className='form-control' placeholder='Enter Plant ID'
                                  value={addplant.id} onChange={(e)=>setAddPlant({...addplant,id:e.target.value})}
                                  required
                                  />
                                 </div>
                                 <div className='form-group'>
-                                <label className='mt-2'><b>Plant Title :</b></label>
+                                <label className='mt-2 label_plant'><b>Plant Title :</b></label>
                                 <input type='text' className='form-control' placeholder='Enter Plant Title'
                                 value={addplant.title} onChange={(e)=>setAddPlant({...addplant,title:e.target.value})}
                                 required
                                 />
                                 </div>
                                 <div className='form-group'>
-                                <label className='mt-2'><b>Plant Description :</b></label>
+                                <label className='mt-2 label_plant'><b>Plant Description :</b></label>
                                 <input type='text' className='form-control' placeholder='Enter Plant Description'
                                 value={addplant.description} onChange={(e)=>setAddPlant({...addplant,description:e.target.value})}
                                 required
                                  />
                                 </div>
                                 <div className='form-group'>
-                                <label className='mt-2'><b>Plant URL :</b></label>
+                                <label className='mt-2 label_plant'><b>Plant URL :</b></label>
                                 <input type='text' className='form-control' placeholder='Enter Plant URL'
                                 value={addplant.plant_url} onChange={(e)=>setAddPlant({...addplant,plant_url:e.target.value})}
                                 required
                                 />
                                 </div>
                                 <div className='form-group'>
-                                <label className='mt-2'><b>Plant Prize :</b></label>
+                                <label className='mt-2 label_plant'><b>Plant Prize :</b></label>
                                 <input type='text' className='form-control' placeholder='Enter Plant Prize'
                                 value={addplant.prize} onChange={(e)=>setAddPlant({...addplant,prize:e.target.value})}
                                 required
                                 />
                                 </div>
                                 <div className='form-group'>
-                                <label className='mt-2'><b>Plant Quantity :</b></label>
+                                <label className='mt-2 label_plant'><b>Plant Quantity :</b></label>
                                 <input type='text' className='form-control' placeholder='Enter Plant Quantity'
                                 value={addplant.quantity} onChange={(e)=>setAddPlant({...addplant,quantity:e.target.value})}
                                 required
                                 />
                                 </div>
                                 <div className='form-group'>
-                                <label className='mt-2'><b>Plant Category :</b></label>
+                                <label className='mt-2 label_plant'><b>Plant Category :</b></label>
                                 <input type='text' className='form-control' placeholder='Enter Plant Category'
                                 value={addplant.category} onChange={(e)=>setAddPlant({...addplant,category:e.target.value})}
                                 required
                                 />
                                 </div>
-                                <button type='submit' className='btn btn-success w-100 mt-4'><b>Add Plant</b></button>
+                                <button type='submit' className='button_plant w-100 mt-4'><b>Add Plant</b></button>
                         </form>
                         </div>
             </div>
