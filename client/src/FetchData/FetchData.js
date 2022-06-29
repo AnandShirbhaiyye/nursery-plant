@@ -29,7 +29,7 @@ export default function FetchData() {
           <div className='gradient'>
          <div className='container' >
        <button  className="button_plant mt-4">
-       <Link className='btnplant' to={'/addplant'}><h4>ADD PLANTS</h4></Link>
+       <Link className='btnplant' to={'/addplant'}><h4><i class="fa-solid fa-square-plus" style={{color:"black"}}></i> ADD PLANTS</h4></Link>
        </button>
        <h1 className="text-center card-title">Show Plant</h1>
        <hr/>

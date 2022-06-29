@@ -1,0 +1,66 @@
+
+.planttext{
+    color: white;
+}
+.customer_review{
+    color: white;
+}
+.imp_nursery{
+    height: 100%;
+    width: 100%;
+}
+.img_custumer{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+.font-star{
+    color: #ffc107;
+}
+.customer_review{
+    font-size: 15px;
+    padding: 5px;
+    background-color: #334f64;
+    color: white;
+    margin-bottom: 20px;
+}
+.img_hover{
+width: 98%;
+height: auto;
+border: 2px solid black;
+border-radius: 10px;
+margin-bottom: 30px;
+transition: 0.2s;    
+}
+.img_hover:hover{
+    transform: scale(1.1);
+}
+.Learnmore{
+    padding: 5px;
+    border-radius: 15px;
+    color: white;
+    width: 200px;
+    background-color: black;
+    font-size: large;
+    font-weight: 300;
+    border: none;
+}
+.Learnmore:hover{
+    background-color: gray;
+    color: black;
+    box-shadow:  0 0 5px black;
+}
+.paragraph_home{
+    font-size: 16px;
+    color: white;
+}
+.br_margin{
+    margin-top: 50px;
+}
+.carousal_slide{
+    height: 70%;
+    width: 100%;
+}
+.carouselSlide{
+    height:40%;
+}
