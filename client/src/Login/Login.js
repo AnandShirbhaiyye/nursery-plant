@@ -1,15 +1,15 @@
-import React from "react";
-import "./Login.css";
+import React from 'react';
+import './Login.css';
 
 export default function Login() {
   return (
-    <>
-      <div className="gradient">
+   <>
+   <div className="gradient">
       <div className="container">
         <div className="row">
           <div className="col-md-3"></div>
           <div className="col-md-9">
-            <div className="card card_login" style={{bqckgroundColor:"#00e0c6"}}>
+            <div className="card card_register" style={{backgroundColor:"#00E0c6"}}>
               <h2 className="text-center">Login</h2>
               <form>
                 <div className="form-group mt-2">
@@ -56,6 +56,11 @@ export default function Login() {
         </div>
       </div>
       </div>
-    </>
-  );
+
+   </>
+  )
 }
+
+
+
+

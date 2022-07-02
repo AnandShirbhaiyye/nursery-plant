@@ -13,8 +13,8 @@ function HomePage() {
   return (
     <div className='gradient'>
   <div id="carouselExampleControls" className="carousel slide " data-bs-ride="carousel">
-  <div className="carousel-inner">
-    <div className="carousel-item active" style={{height:"500px"}}>
+  <div className="carousel-inner" style={{height:"500px"}}>
+    <div className="carousel-item active">
       <img src={image} className="d-block w-100" alt="..."></img>
     </div>
     <div className="carousel-item">
