@@ -9,7 +9,7 @@ export default function Login() {
         <div className="row">
           <div className="col-md-3"></div>
           <div className="col-md-9">
-            <div className="card card_register" style={{backgroundColor:"#00E0c6"}}>
+            <div className="card card_register" style={{backgroundColor:"#2a8896"}}>
               <h2 className="text-center">Login</h2>
               <form>
                 <div className="form-group mt-2">

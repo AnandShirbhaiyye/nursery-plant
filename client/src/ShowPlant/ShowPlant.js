@@ -16,7 +16,7 @@ export default function ShowPlant(props) {
   
   return (
     <>
-          <div className='col-md-4 mt-3 p-3'>
+          <div className='col-6 mt-3 p-3'>
             <div className='box-sizing card-border'>
             <img src={props.plant_url} className='img-sizing' alt='plantimg' />
              {/* <img src="https://bloximages.chicago2.vip.townnews.com/thesouthern.com/content/tncms/assets/v3/editorial/1/c3/1c3d3c5f-d978-526f-a866-fa4ead9004c8/570448dd301db.image.jpg?resize=1200%2C800" className='img-sizing' alt='plantimg' /> */}
@@ -31,11 +31,13 @@ export default function ShowPlant(props) {
             <div className='btn-sizing mt-3'>
               <div className='row'>
               <div className='col-md-6'>
-            <button className='btn btn-success w-100'>Edit</button>
+            <button className='button_show_plants w-100'><b>Edit</b></button>
             </div>
             <div className='col-md-6'>
-            <button className='btn btn-danger w-100'
-             onClick={deletePlant}>Delete</button>
+            <button type='submit' className='button_show_plant w-100'
+            onClick={deletePlant}><b>Delete</b></button>
+            {/* <button className='btn btn-danger w-100'
+             onClick={deletePlant}>Delete</button> */}
             </div>
             </div>
             </div>

@@ -24,11 +24,27 @@
     border-radius: 20px;
     box-shadow: 0 0  10px black;
     transition: 0.2s;
-    background-color: lightgray;
+    background-color: #315876;
     padding: 15px;
     /*background-color: rgb(82, 142, 82);*/
 }
 .card-memo{
     display: flex;
     flex-direction:row;
+}
+.button_show_plant{
+    background-color: tomato;
+    border: none;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    color: white;
+}
+.button_show_plants{
+    background-color: green;
+    border: none;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    color: white;
 }
