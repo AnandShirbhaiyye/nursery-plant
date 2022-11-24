@@ -35,8 +35,9 @@ export default function FetchData() {
        <hr/>
        <div className='row'>
          {
-           plant.map(plants =><ShowPlant id={plants.id} title={plants.title} description={plants.description}
-           plant_url={plants.plant_url} prize={plants.prize} quantity={plants.quantity} category={plants.category}  />)
+           plant.map(plants =><ShowPlant id={plants.id} plant_url={plants.plant_url} title={plants.title} description={plants.description}
+             prize={plants.prize} quantity={plants.quantity} category={plants.category}  
+             />)
          }
          </div>
        </div>

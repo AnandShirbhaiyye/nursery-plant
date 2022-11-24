@@ -9,6 +9,7 @@ import Navbar from './Navbar/Navbar';
 import HomePage from './Homepage/HomePage';
 import Footer from './Footer/Footer';
 import Card from './Card/Card';
+import EditPlant from './EditPlant/EditPlant';
 
 
 export default function App() {
@@ -20,14 +21,23 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/addplant" element={<AddPlant />} />
-          <Route path="/showplant" element={<ShowPlant />} />
+          <Route path="/showplant" element={<ShowPlant />} >
+          <Route path="editplant" element={<EditPlant/>}>
+           <Route path=":editplantid" element={<EditPlant/>}/>
+         </Route>
+          </Route>
           <Route path="/get/allplant" element={<FetchData />} />
+          <Route path="/cardplant" element={<Card/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register/>}/>
-          <Route path="/cardplant" element={<Card/>}/>
+          <Route path="/editplant" element={<EditPlant/>}></Route>
+          {/* <Route path=":editplantid" element={<CourseId/>}/> */}
+        
         </Routes>
         <Footer/>
       </BrowserRouter>
+     
+     
     </div>
     </>
      
