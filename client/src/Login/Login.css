@@ -13,3 +13,12 @@
 /* .card{
     background-color: #00E0c6;
 } */
+
+
+.card-border{
+    border-radius: 25px;
+    background-color: #00E0c6;
+}
+.bg-color{
+    background-color: #009393;
+}

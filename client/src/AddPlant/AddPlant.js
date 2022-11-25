@@ -78,7 +78,7 @@ export default function AddPlant() {
             </div>
             <div className='col-md-6'>
             <div className='mt-2'>
-                        <h2 className='card-title text-center'>Add Plant</h2>
+                        <h2 className='card-title text-center'>🪴Add Plant</h2>
                         <form onSubmit={plantsubmit} >
                             <div className='form-group'>
                                 <label className='label_plant'><b>Plant ID :</b></label>
