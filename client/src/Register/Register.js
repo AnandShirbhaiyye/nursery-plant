@@ -1,7 +1,9 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import './Register.css';
 
 export default function Register() {
+  // const []
   return (
     <>
     <div className='bg-color'>
@@ -92,7 +94,7 @@ export default function Register() {
                 </button>
 
                 <p className="text-center mt-2 ">
-                  Already have Account ? <a  className="regis_now" href="./login"> <b>Login</b></a>
+                  Already have Account ? <Link  className="regis_now" to="/login"> <b>Login</b></Link>
                 </p>
               </form>
               

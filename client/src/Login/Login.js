@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Login.css";
 
 function Login() {
@@ -10,7 +11,7 @@ function Login() {
             <div className="col-md-2"></div>
             <div className="col-md-8 ">
               <div className="card-border shadow  p-4 mt-3 mb-3">
-                <h2 className="text-center">Loginl</h2>
+                <h2 className="text-center">Login</h2>
                 <form>
                   <div className="form-group mt-2">
                     <label htmlFor="email">
@@ -50,10 +51,10 @@ function Login() {
 
                   <p className="text-center mt-2">
                     Don't have Account ?{" "}
-                    <a className="regis_now" href="./register">
+                    <Link className="regis_now" to="/register">
                       {" "}
                       <b>Register Now</b>
-                    </a>
+                    </Link>
                   </p>
                 </form>
               </div>

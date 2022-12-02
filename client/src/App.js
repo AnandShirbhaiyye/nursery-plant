@@ -30,7 +30,7 @@ export default function App() {
           <Route path="/cardplant" element={<Card/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register/>}/>
-          <Route path="/editplant" element={<EditPlant/>}></Route>
+          <Route path="/editplant" element={<EditPlant/>}/>
           {/* <Route path=":editplantid" element={<CourseId/>}/> */}
         
         </Routes>
